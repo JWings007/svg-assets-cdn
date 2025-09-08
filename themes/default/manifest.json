@@ -1,0 +1,7 @@
+{
+  "name": "default",
+  "version": "1.0.0",
+  "assets": {
+    "array.cell": { "type": "svg-inline", "path": "array.cell.svg" }
+  }
+}

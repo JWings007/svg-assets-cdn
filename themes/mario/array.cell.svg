@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="256" height="256"
+     shape-rendering="crispEdges" role="img" aria-labelledby="title desc">
+  <title id="title">Retro Pixel Cube — Plain Mario-style</title>
+  <desc id="desc">A static 8-bit block with shading, rivets, and animated shine sweep. Transparent background, no symbol inside.</desc>
+
+  <!-- THEME -->
+  <defs>
+    <style>
+      .out { fill:#5a3812; }   /* outer border (dark brown) */
+      .mid { fill:#f2a84a; }   /* base face color */
+      .lt  { fill:#ffd37a; }   /* highlight */
+      .dk  { fill:#b86a1b; }   /* shadow */
+      .wh  { fill:#fffbe6; }   /* rivet light */
+      .sh  { fill:#c89c3a; }   /* rivet shadow */
+    </style>
+    <!-- clip so the shine stays inside -->
+    <clipPath id="faceClip">
+      <rect x="1" y="1" width="14" height="14"/>
+    </clipPath>
+  </defs>
+
+  <!-- OUTER BORDER -->
+  <rect x="0" y="0" width="16" height="16" class="out"/>
+
+  <!-- FACE -->
+  <rect x="1" y="1" width="14" height="14" class="mid"/>
+
+  <!-- SHADING -->
+  <rect x="1" y="1" width="14" height="3" class="lt"/>
+  <rect x="1" y="1" width="3" height="14" class="lt"/>
+  <rect x="1" y="12" width="14" height="3" class="dk"/>
+  <rect x="12" y="1" width="3" height="14" class="dk"/>
+
+  <!-- CORNER RIVETS -->
+  <rect x="3"  y="3"  width="1" height="1" class="wh"/>
+  <rect x="4"  y="4"  width="1" height="1" class="sh"/>
+  <rect x="12" y="3"  width="1" height="1" class="wh"/>
+  <rect x="13" y="4"  width="1" height="1" class="sh"/>
+  <rect x="3"  y="12" width="1" height="1" class="wh"/>
+  <rect x="4"  y="13" width="1" height="1" class="sh"/>
+  <rect x="12" y="12" width="1" height="1" class="wh"/>
+  <rect x="13" y="13" width="1" height="1" class="sh"/>
+
+  <!-- SHINE SWEEP -->
+  <g clip-path="url(#faceClip)" opacity="0.55">
+    <rect x="-16" y="1" width="2" height="14" fill="#ffffff">
+      <animate attributeName="x" from="-16" to="30" dur="1.8s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+</svg>
