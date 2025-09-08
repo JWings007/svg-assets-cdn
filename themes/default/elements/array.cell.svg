@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-labelledby="title desc">
+  <title id="title">Liquid Glass Square — Slide Animation</title>
+  <desc id="desc">A clean, translucent rounded square with a sliding shimmer; transparent background.</desc>
+
+  <defs>
+    <!-- Clip to the rounded square -->
+    <clipPath id="boxClip">
+      <rect x="16" y="16" width="224" height="224" rx="32" ry="32"/>
+    </clipPath>
+
+    <!-- Shimmer gradient (center bright, edges fade) -->
+    <linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Glass square (transparent background) -->
+  <rect x="16" y="16" width="224" height="224" rx="32" ry="32"
+        fill="#FFFFFF" fill-opacity="0.16"
+        stroke="#FFFFFF" stroke-opacity="0.55" stroke-width="1.5"/>
+
+  <!-- Sliding shimmer (the only animation inside the box) -->
+  <g clip-path="url(#boxClip)" opacity="0.55">
+    <!-- a vertical band that slides across -->
+    <rect x="-260" y="16" width="120" height="224" fill="url(#sweep)">
+      <animate attributeName="x" from="-260" to="396" dur="3.5s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+</svg>
