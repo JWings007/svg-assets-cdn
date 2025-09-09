@@ -19,7 +19,7 @@
   <!-- Glass square (transparent background) -->
   <rect x="16" y="16" width="224" height="224" rx="32" ry="32"
         fill="#FFFFFF" fill-opacity="0.16"
-        stroke="#FFFFFF" stroke-opacity="0.55" stroke-width="1.5"/>
+        stroke="#FFFFFF" stroke-opacity="0.55" stroke-width="1.5" class="cell-outer-rect"/>
 
   <!-- Sliding shimmer (the only animation inside the box) -->
   <g clip-path="url(#boxClip)" opacity="0.55">
