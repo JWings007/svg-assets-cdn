@@ -1,0 +1,12 @@
+{
+  "name": "frost",
+  "version": "1.0.0",
+  "preload": {
+    "elements.array.cell": {
+      "path": "elements/array.cell.svg",
+      "size": 2500
+    }
+  },
+  "illustrations": {
+  }
+}
